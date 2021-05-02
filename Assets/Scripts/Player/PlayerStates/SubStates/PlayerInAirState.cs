@@ -19,6 +19,7 @@ public class PlayerInAirState : PlayerState
     private bool oldIsTouchingWallBack;
     private bool isTouchingLedge;
     private bool isJumping;
+  
 
     // Others
     private bool coyoteTime;
@@ -39,6 +40,7 @@ public class PlayerInAirState : PlayerState
         isTouchingWall = player.CheckIfTouchingWall();
         isTouchingWallBack = player.CheckIfTouchingWallBack();
         isTouchingLedge = player.CheckIfTouchingLedge();
+     
 
         if (isTouchingWall && !isTouchingLedge)
         {
