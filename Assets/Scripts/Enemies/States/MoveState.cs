@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MoveState : State
 {
-
     protected D_MoveState stateData;
 
     protected bool isDetectingWall;
@@ -12,6 +11,8 @@ public class MoveState : State
     protected bool isPlayerInMinAgroRange;
     public MoveState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_MoveState stateData) : base(entity, stateMachine, animBoolName)
     {
+        //---------------------------------------------------------------------------------------------------------------------------------------------
+        // Ici la variable "stateData" est rajoutée dans le constructeur de "MoveState", en plus des variables déjà existantes dans la Classe "State".
         this.stateData = stateData;
     }
 
@@ -26,6 +27,9 @@ public class MoveState : State
 
     public override void Enter()
     {
+        //---------------------------------------------------------------------------------------------------------------------------------------------
+        // Ici le "base.Enter()" rappel la fonction de base avant de lui ajouter l'instruction "entity.SetVelocity...". Néanmoins il est possible
+        // d'éviter le rappel de la fonction de base en supprimant "base.Enter()".
         base.Enter();
         entity.SetVelocity(stateData.movementSpeed);
     }

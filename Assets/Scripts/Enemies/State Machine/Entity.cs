@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Script de base dont tous les "ennemies" vont hérités.
 public class Entity : MonoBehaviour
 {
     public FiniteStateMachine stateMachine;
@@ -51,6 +53,8 @@ public class Entity : MonoBehaviour
         animator = aliveGO.GetComponent<Animator>();
         atsm = aliveGO.GetComponent<AnimationToStateMachine>();
 
+        //---------------------------------------------------------------------------------------------------------------------------------------------
+        // Permet à chaque instance "d'Entity" de posséder son propre "FiniteStateMachine".
         stateMachine = new FiniteStateMachine();
     }
 

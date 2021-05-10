@@ -47,6 +47,9 @@ public class PlayerGroundedState : PlayerState
     {
         base.LogicUpdate();
 
+        //---------------------------------------------------------------------------------------------------------------------------------------------
+        // Liste des différents input récupérés dans le SuperState "PlayerGroundedState" afin que chaque Substates puissent lire les valeurs contenues.
+
         xInput = player.InputHandler.NormInputX;
         yInput = player.InputHandler.NormInputY;
         JumpInput = player.InputHandler.JumpInput;

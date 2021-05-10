@@ -66,8 +66,6 @@ public class IdleState : State
         flipAfterIdle = flip;
     }
 
-
-
     private void SetRandomIdleTime()
     {
         idleTime = Random.Range(stateData.minIdleTime, stateData.maxIdleTime);

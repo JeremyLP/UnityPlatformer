@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Sert à répertorier l'intégralité des valeurs modifiables de l'objet "Player" dans un fichier directement modifiable depuis Unity.
 [CreateAssetMenu(fileName="newPlayerData", menuName="Data/Player Data/Base Data")]
 
 public class PlayerData : ScriptableObject

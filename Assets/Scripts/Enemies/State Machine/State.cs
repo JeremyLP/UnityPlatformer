@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Contient toutes les fonctions nécessaires pour que chaque states soient fonctionnels.
 public class State
 {
    protected FiniteStateMachine stateMachine;
@@ -21,12 +23,16 @@ public class State
    public virtual void Enter()
    {
        startTime = Time.time;
+        //---------------------------------------------------------------------------------------------------------------------------------------------
+        // Active le booléen en lien avec les animations en question lors de l'entrée dans le state.
        entity.animator.SetBool(animBoolName, true);
        DoChecks();
    }
 
    public virtual void Exit()
    {
+        //---------------------------------------------------------------------------------------------------------------------------------------------
+        // Désactive le booléen en lien avec les animations en cas de sortie de state.
        entity.animator.SetBool(animBoolName, false);
 
    }

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//---------------------------------------------------------------------------------------------------------------------------------------------
 // Contient les références des states dans lesquels on se trouve.
-public class PlayerStateMachine 
+// Donc GERE PRINCIPALEMENT LES CHANGEMENTS DE STATES.
+public class PlayerStateMachine
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
     // Le "{ get; private set; }" signifie que tout autre script ayant une référence à cette variable

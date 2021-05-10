@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Classe qui permet d'initialiser les différents "states" du joueur, ainsi que de déclencher les différents checks vis à vis du joueur. En
+// bref, tout ce qui s'apparente à l'objet "Player" directement.
 public class Player : MonoBehaviour
 {
     #region State Variables
-
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    // Récupération des différentes classes liées au joueur.
     public PlayerStateMachine StateMachine { get; private set; }
     public PlayerIdleState IdleState { get; private set; }
     public PlayerMoveState MoveState { get; private set; }
@@ -79,9 +83,6 @@ public class Player : MonoBehaviour
         CrouchMoveState = new PlayerCrouchMoveState(this, StateMachine, playerData, "crouchMove");
         PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
         SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
-
-
-
     }
 
     private void Start()
@@ -105,11 +106,15 @@ public class Player : MonoBehaviour
     private void Update() 
     {
         CurrentVelocity = RB.velocity;
+        //---------------------------------------------------------------------------------------------------------------------------------------------
+        // Rappel de la foction "LogicUpdate()" dans la fonction "Update()" !
         StateMachine.CurrentState.LogicUpdate();    
     }
 
     private void FixedUpdate()
     {
+        //---------------------------------------------------------------------------------------------------------------------------------------------
+        // Rappel de la foction "PhysicsUpdate()" dans la fonction "FixedUpdate()" !
        StateMachine.CurrentState.PhysicsUpdate();     
     }
     #endregion

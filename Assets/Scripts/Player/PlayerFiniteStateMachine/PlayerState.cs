@@ -1,10 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
 // Classe de base dont tous les autres states, vont hériter !
 // MonoBehavior n'est pas utlisé en tant que classe, car aucun besoin de lier ce script à un objet (entre autres raisons j'imagine)
+// Gère principalement le LANCEMENT DES ANIMATIONS EN FONCTION DU STATE UTILISE !
 public class PlayerState 
 {    
     //---------------------------------------------------------------------------------------------------------------------------------------------

@@ -74,6 +74,10 @@ public class PlayerInputHandler : MonoBehaviour
     {
         RawMovementInput = context.ReadValue<Vector2>();
 
+        //---------------------------------------------------------------------------------------------------------------------------------------------
+        // Arrondire les valeurs de X/Y afin d'avoir trois valeurs précises (1, 0, -1). Cela permet de conserver une vitesse de déplacement constante dans le cas
+        // où le personnage serait controlé avec une manette, afin d'éviter de pouvoir appliquer une variation de la vitesse en fonction du degré d'appuie sur
+        // le stick de déplacement.
         NormInputX = Mathf.RoundToInt(RawMovementInput.x);
         NormInputY = Mathf.RoundToInt(RawMovementInput.y);    
     }
