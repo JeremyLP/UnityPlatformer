@@ -11,6 +11,7 @@ public class PlayerState
     //---------------------------------------------------------------------------------------------------------------------------------------------
     // protected est utilisé pour limiter l'accéss aux variables à seulement cette la classe en particulier ainsi qu'à chacunes de ses subclasses
     // private se limitant à la classe en question !
+    protected Core core;
     protected Player player;
 
     protected PlayerStateMachine stateMachine;
@@ -47,6 +48,7 @@ public class PlayerState
         this.stateMachine = stateMachine;
         this.playerData = playerData;
         this.animBoolName = animBoolName;
+        core = player.Core;
     }    
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
